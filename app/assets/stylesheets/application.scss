@@ -1,0 +1,64 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+*{
+  box-sizing:border-box;
+}
+
+body{
+  background-color:#c0dfd9;
+  font-size:20px;
+}
+
+h1{
+  text-align:center;
+}
+
+.mycontainer{
+
+  margin:30px auto;
+
+}
+
+.mybtn{
+  float:right;
+}
+
+button:hover{
+  text-decoration:none;
+}
+
+.clearfix{
+  clear:both;
+}
+
+
+
+.list{
+  background:#e9ece5;
+  padding:20px 30px;
+  width:500px;
+  margin:20px auto;
+
+}
+
+.new{
+  width:500px;
+  margin:0 auto;
+}
+
+.mycontent{
+  background:#e9ece5;
+  padding:25px;
+  width:600px;
+  margin:80px auto;
+  
+}
+
+.myrow{
+  border:1px solid black;
+}
+
+.content{
+  padding:9px 0px;
+}
+

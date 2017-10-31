@@ -1,0 +1,14 @@
+<div class="mycontainer">
+
+<%= form_for @item do |i|%>
+<div class="mycontent">
+<div>
+<%= i.label :content, "content" %>
+<%= i.text_field :content %>
+<%= i.submit %>
+<button type="button" class="mybtn btn"><%= link_to 'back', items_path %></button>
+</div>
+
+<% end %>
+</div>
+</div>

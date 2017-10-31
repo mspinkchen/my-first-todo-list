@@ -1,0 +1,29 @@
+
+
+<div class="mycontainer container">
+<h1> Pink's Todo List </h1>
+<div class="new">
+<button type="button" class="mybtn btn btn-info"><%= link_to 'New', new_item_path %></button>
+</div>
+<div class="clearfix"></div>
+<div class="list">
+
+<div class="row">
+<% @items.each do |item| %>
+<div class="col-xs-1 ">
+  <div class="input-group content">
+    <input type="checkbox">
+    </div>
+  </div>
+<div class="col-xs-10 content"><%= item.content %>
+</div>
+<div class="col-xs-1 content">
+  <%= link_to items_path(item), method: :delete do %>
+  <div class="glyphicon glyphicon-trash"></div>
+    <% end %>
+  </div>
+<hr>
+<% end %>
+</div>
+</div>
+</div>
