@@ -6,21 +6,29 @@
 
 body{
   background-color:#c0dfd9;
-  font-size:20px;
+  font-size:18px;
+  font-family:Helvetica, 儷中黑;
+  color:#534847;
 }
 
 h1{
   text-align:center;
 }
 
-.mycontainer{
-
+.mycontent{
+  background:#e9ece5;
+  width:50%;
+  padding:10px;
   margin:30px auto;
-
+  border-radius:20px;
+  box-shadow:3px 3px 3px #7C7877;
 }
 
 .mybtn{
-  float:right;
+  display:inline-block;
+  width:100px;
+  margin:0 auto;
+
 }
 
 button:hover{
@@ -35,30 +43,16 @@ button:hover{
 
 .list{
   background:#e9ece5;
-  padding:20px 30px;
-  width:500px;
+  padding:15px 30px;
   margin:20px auto;
+  border-radius:20px;
+  box-shadow:3px 3px 3px #7C7877;
 
 }
 
-.new{
-  width:500px;
-  margin:0 auto;
+.item{
+  display:inline-block;
+  border:red;
 }
 
-.mycontent{
-  background:#e9ece5;
-  padding:25px;
-  width:600px;
-  margin:80px auto;
-  
-}
-
-.myrow{
-  border:1px solid black;
-}
-
-.content{
-  padding:9px 0px;
-}
 

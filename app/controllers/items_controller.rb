@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, :only => [:edit, :update, :show, :destroy]
+  before_action :set_item, :only => [:edit, :update, :destroy]
 
   def index
-    @items = Item.all
+    @items = Item.order(due_date: :asc)
   end
 
   def new
@@ -13,8 +13,11 @@ class ItemsController < ApplicationController
 
   def create 
     @item = Item.new(item_params)
-    @item.save
+    if @item.save
     redirect_to items_url
+    else
+    render :new
+    end
   end
 
   def update
@@ -23,9 +26,16 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+  if @item.can_destroy? 
     @item.destroy
-
     redirect_to items_url
+
+  else 
+    redirect_to items_url
+
+  end
+
+
   end
 
 
@@ -33,7 +43,7 @@ class ItemsController < ApplicationController
   private 
 
   def item_params
-    params.require(:item).permit(:content)
+    params.require(:item).permit(:content, :due_date, :note)
   end
 
   def set_item
